@@ -1,0 +1,1 @@
+<iframe src="{{ $path }}" frameborder="0"></iframe>
