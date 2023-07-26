@@ -48,9 +48,11 @@ class ProductDetailController extends FrontendController
                 ->orderByDesc('id')
                 ->paginate(5);
 
-            if ($request->ajax()) {
+
+                if ($request->ajax()) {
                 $html = view('frontend.pages.product_detail.include._inc_list_comments', compact('comments', 'product'))->render();
                 return response(['html' => $html]);
+
             }
 
             $productsHot = Product::where([
