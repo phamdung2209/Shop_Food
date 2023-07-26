@@ -149,6 +149,7 @@ class AdminProductController extends Controller
                 mkdir($path, 0777, true);
             }
 
+
             $fileImage->move($path, $filename);
             \DB::table('product_images')
             ->insert([
