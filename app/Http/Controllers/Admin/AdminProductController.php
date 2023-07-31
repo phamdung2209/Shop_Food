@@ -40,11 +40,12 @@ class AdminProductController extends Controller
         $attributeOld = [];
         $keywordOld   = [];
 
-        $attributes = Type::with('attributes:id,atb_name,atb_type_id')->get()->toArray();
+        $attributesWeight = Type::with('attributes:id,atb_name,atb_type_id')->where('id', 1)->get()->toArray();
+        $attributesSize = Type::with('attributes:id,atb_name,atb_type_id')->where('id', 2)->get()->toArray();
+// dd($attributesWeight[0]['attributes']);
         $keywords   = Keyword::all();
-        $producer = Producer::all();
-
-        return view('admin.product.create', compact('categories', 'attributeOld', 'attributes', 'keywords', 'keywordOld', 'producer'));
+        $producers = Producer::all();
+        return view('admin.product.create', compact('categories', 'attributeOld', 'attributesWeight', 'attributesSize', 'keywords', 'keywordOld', 'producers'));
     }
 
     public function store(AdminRequestProduct $request)

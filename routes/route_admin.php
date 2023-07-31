@@ -193,5 +193,5 @@
 
             Route::get('delete/{id}','DiscountCodeController@delete')->name('admin.discount.code.delete');
         });
-        
+
     });

@@ -169,6 +169,6 @@ class ProductDetailController extends FrontendController
             ->limit(12)
             ->get();
 
-        return $products;
+            return $products;
+        }
     }
-}
