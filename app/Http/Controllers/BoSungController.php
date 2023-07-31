@@ -23,7 +23,7 @@ class BoSungController extends Controller
     	}else{
     		$data = '';
     	}
-       
+
        	$output = '';
 	        if($data){
 
@@ -40,7 +40,7 @@ class BoSungController extends Controller
 	         	}
 
 	        $output.= '</ul>';
-	     
+
      	}
 
      	   echo $output;

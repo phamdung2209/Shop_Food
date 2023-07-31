@@ -14,7 +14,7 @@
         <!-- Default box -->
         <div class="box">
             <div class="box-header with-border">
-              
+
                 <div class="box-body">
                    <div class="col-md-12">
                         <table class="table">
@@ -27,12 +27,12 @@
                                     <th>Địa chỉ</th>
                                     <th>Phone</th>
                                     <th>Note</th>
-                                
+
                                     <th>Tổng tiền</th>
                                     <th>Ngày tạo</th>
                                     <th>Hành động</th>
                                 </tr>
-                             
+
                                     @foreach($transaction as $key => $tran)
                                         <tr>
                                             <td>{{ $tran->id }}</td>
@@ -44,7 +44,7 @@
                                             <td>{{ $tran->tst_note }}</td>
                                              <td>{{ number_format($tran->tst_total_money,0,',','.') }}đ</td>
 
-                                          
+
                                             <td>{{  $tran->created_at }}</td>
                                             <td>
                                                 <a href="{{ route('chitietdonhang', [$tran->id]) }}" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> Xem đơn hàng</a>
@@ -52,7 +52,7 @@
                                             </td>
                                         </tr>
                                     @endforeach
-                              
+
                             </tbody>
                         </table>
                     </div>
